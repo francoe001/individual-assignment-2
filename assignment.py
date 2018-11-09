@@ -29,3 +29,17 @@ def bubble(lst):
         y += 1
         print(lst)
 
+#%%
+
+#Mergesort = O(nlog(n))
+#Recursion
+
+def sum_list(lst):
+    if lst == []:
+        return 0
+    else:
+        return lst[0] + sum_list(lst[1:])
+                
+#slicing
+#lst[x:y:z] where x is the first element to start the slice, y is the last element to end the slice, z is the interval          
+
