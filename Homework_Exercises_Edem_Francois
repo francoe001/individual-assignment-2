@@ -1,0 +1,78 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov 14 22:49:28 2018
+
+@author: efrancois
+"""
+
+#%%
+
+#Exercise 1
+#create a more accurate version of calculate_volume_cilinder and calculate_volume_sphere 
+#that gets the pi constant from the math module
+
+import math
+
+def calculate_volume_cylinder(r_sq,h):
+    
+    r_sq = math.pow(r_sq, 2)
+    volume = math.pi * r_sq * h
+    return volume
+ 
+print(calculate_volume_cylinder(6, 20))
+
+
+def calculate_volume_sphere(r):
+    
+    volume = 4/3 * math.pi * r**3
+    return volume
+
+
+print(calculate_volume_sphere(4))
+
+
+
+#%%
+
+#Exercise 2
+#Investigate how to create histograms using the matplotlib library.  Create a function 
+#that uses the matplotlib library to plot the histogram of the grade distribution in an 
+#imaginary IE class with 100 students.  
+#Remember that there are 15% pass, 35% proficiency, 35% excellence, and 15% honors in a class.
+
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = ['Pass', 'Prociency', 'Excellence', 'Honors']
+grades_dist = [15, 35, 35, 15]
+
+index = np.arange(len(x))
+
+plt.bar(index, grades_dist)
+plt.xlabel("Grades Distribution")
+plt.ylabel("Number of Students")
+plt.title("IE Grade Distribution")
+
+plt.xticks(index, x)
+
+plt.show()
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
